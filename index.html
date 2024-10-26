@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerowatt Energy</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename"></h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <div class="header-social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <div class="container text-center">
+                <div class="row justify-content-center" data-aos="zoom-out">
+                    <div class="col-lg-8">
+                        <img src="assets/img/hero-logo.png" alt="" class="img-fluid mb-3">
+                        <h2>Know Your Energy Usage</h2>
+                        <p>Knowing where you stand is the first step to optimizing</p>
+                        <a href="#calculator" class="btn-get-started">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /Hero Section -->
+
+        <!-- Calculator Section -->
+        <section id="calculator" class="calculator section">
+
+            <!-- Option selector -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div id="calc-selector">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <h2>Calculator</h2>
+                                <p>
+                                    Select your calculator - Easy, Advanced or Expert
+                                </p>
+                                <ul>
+                                    <li><a href="#calculator" class="active" onclick="showDiv('calc-easy')">Easy as a +
+                                            b = c</a></li>
+                                    <li><a href="#calculator" onclick="showDiv('calc-advanced')">Advanced as y =
+                                            f(x)</a></li>
+                                    <li><a href="#calculator" onclick="showDiv('calc-expert')">Expert stuff</a></li>
+                                </ul>
+                            </div>
+                            <hr style="color: aliceblue;">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /Option selector -->
+
+            <div id="calc-options">
+                <!-- Easy option -->
+                <div id="calc-easy" class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <h3>Here is the easy option</h3>
+                            <p>
+                                Lets capture the energy values and see where we stand
+                            </p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="contractdemand" class="form-label">Contract Demand (kVA)</label>
+                                    <input type="number" class="form-control" id="contractdemand-easy"
+                                        name="contractdemand" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="maxload" class="form-label">Maximum load in the previous bill
+                                        (kVA)</label>
+                                    <input type="number" class="form-control" id="maxload-easy" name="maxload" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="electricity" class="form-label">Total Electricity Usage (kWh)</label>
+                                    <input type="number" class="form-control" id="electricity-easy" name="electricity"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="industry" class="form-label">Industry type</label>
+                                    <select class="form-select" id="industry-easy" name="industry" required>
+                                        <option value="" disabled selected>Select your industry</option>
+                                        <option value="manufacturing">Manufacturing</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="education">Education</option>
+                                        <option value="retail">Retail</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Location</label>
+                                    <select class="form-select" id="location-easy" name="location" required>
+                                        <option value="" disabled selected>Select your location</option>
+                                        <option value="kl">Kerala</option>
+                                        <option value="tn">Tamil Nadu</option>
+                                        <option value="ka">Karnataka</option>
+                                        <option value="in">Rest of India</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <button class="btn btn-primary" onclick="calculate_easy()">Calculate</button>
+                        </div>
+
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <h3>Contract demand</h3>
+                            <p>
+                                This is your allowed maximum demand. You pay for this irrespective of how much
+                                electricity
+                                you use. The fixed tariff on the bill is calculated from this number. If you dont use
+                                this
+                                much, you are paying unwanted charges. If you exceed this limit, there is a penalty. You
+                                can
+                                get this value from your latest electricity bill.
+                            </p>
+                            <h3>Total Energy Usage</h3>
+                            <p>
+                                This is the total energy usage for a month. You pay veriable charges to your utility
+                                company
+                                based on how much units you sonsume every month. You can get this value from your latest
+                                electricity bill.
+                            </p>
+                            <h3>Industry</h3>
+                            <p>
+                                Your industry type is important to understand the energy usage pattern.
+                            </p>
+                            <h3>Location</h3>
+                            <p>
+                                Tariff rates and energy sources vary by location. This is important to understand the
+                                cost
+                            </p>
+                        </div>
+
+                    </div>
+                </div> <!-- /Easy option -->
+
+                <!-- Advanced option -->
+                <div id="calc-advanced" class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <h2>A bit advanced</h2>
+                            <p>
+                                Lets capture the energy values and see where we stand
+                            </p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="contractdemand-adv" class="form-label">Contract Demand (kVA)</label>
+                                    <input type="number" class="form-control" id="contractdemand-adv"
+                                        name="contractdemand" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="maxload-adv" class="form-label">Maximum load in the previous bill
+                                        (kVA)</label>
+                                    <input type="number" class="form-control" id="maxload-adv" name="maxload" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pf" class="form-label">Power factor in the previous bill
+                                        (kVA)</label>
+                                    <input type="number" class="form-control" id="pf" name="pf" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="electricity-z1" class="form-label">Total Electricity Usage (kWh)</label>
+                                    <input type="number" class="form-control" id="electricity-z1" name="electricity-z1"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="electricity-z2" class="form-label">Total Electricity Usage (kWh)</label>
+                                    <input type="number" class="form-control" id="electricity-z2" name="electricity-z2"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="electricity-z3" class="form-label">Total Electricity Usage (kWh)</label>
+                                    <input type="number" class="form-control" id="electricity-z3" name="electricity-z3"
+                                        required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="location-adv" class="form-label">Location</label>
+                                    <select class="form-select" id="location-adv" name="location-adv" required>
+                                        <option value="" disabled selected>Select your location</option>
+                                        <option value="kl">Kerala</option>
+                                        <option value="tn">Tamil Nadu</option>
+                                        <option value="ka">Karnataka</option>
+                                        <option value="in">Rest of India</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <button class="btn btn-primary" onclick="calculate_advanced()">Calculate</button>
+                        </div>
+
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <h2>Contract demand</h2>
+                            <p>
+                                This is your allowed maximum demand. You pay for this irrespective of how much
+                                electricity
+                                you use. The fixed tariff on the bill is calculated from this number. If you dont use
+                                this
+                                much, you are paying unwanted charges. If you exceed this limit, there is a penalty. You
+                                can
+                                get this value from your latest electricity bill.
+                            </p>
+                            <h2>Total Energy Usage</h2>
+                            <p>
+                                This is the total energy usage for a month. You pay veriable charges to your utility
+                                company
+                                based on how much units you sonsume every month. You can get this value from your latest
+                                electricity bill.
+                            </p>
+                            <h2>Industry</h2>
+                            <p>
+                                Your industry type is important to understand the energy usage pattern.
+                            </p>
+                            <h2>Location</h2>
+                            <p>
+                                Tariff rates and energy sources vary by location. This is important to understand the
+                                cost
+                            </p>
+                        </div>
+
+                    </div>
+                </div> <!-- /Advanced option -->
+
+                <!-- Expert option -->
+                <div id="calc-expert" class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12" data-aos="fade-left">
+                            <h2>Too complex for you?</h2>
+                            <p>
+                                call us to figureout how we can help you
+                            </p>
+                        </div>
+
+                    </div>
+                </div><!-- /Expert option -->
+
+
+
+            </div>
+
+            <!-- Result -->
+            <div id="result" class="container">
+                <div class="col-lg-12" data-aos="fade-left">
+                    <h2>Saving potential</h2>
+                    <div id="resultplaceholder"></div>
+                </div>
+            </div><!-- /Result -->
+
+        </section><!-- /Calculator Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>About Us</h2>
+                <p>
+                    Alphageek company that helps you optimize your energy usage. We provide solutions
+                    to help you reduce your energy consumption and save money using our flagship product
+                    Zerowatt Energy Intelligence.
+                </p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+                    <div class="col-lg-12 content">
+                        <h3>The team</h3>
+                        <p class="fst-italic">
+                            We are a team of engineers and data scientists who are passionate about energy efficiency.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /About Section -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section dark-background">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h2>Contact Us</h2>
+                        <p>
+                            We are here to help you optimize your energy usage. Reach out to us for a free consultation.
+                        </p>
+                        <a href=https://bookings.alphageek.in/#/subin>Book a meeting</a>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <h2>Our Address</h2>
+                        <p>
+                            Zerowatt Energy<br>
+                            1234 Main Street<br>
+                            Bangalore, KA 560001<br>
+                            India<br><br>
+                            <strong>Phone:</strong> +91 123 456 7890<br>
+                            <strong>Email:</strong>
+                            <a href="mailto:sales@zerowatt.energy">sales@zerowatt.energy</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Contact Section -->
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <script>
+            showDiv('calc-easy');
+        </script>
+</body>
+
+</html>
