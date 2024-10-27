@@ -392,6 +392,11 @@ h6 {
     display: none;
 }
 
+#result p {
+    color: var(--text-color-green);
+    font-weight: 700;
+    display: inline;
+}
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
